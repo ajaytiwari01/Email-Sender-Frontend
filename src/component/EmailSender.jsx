@@ -127,7 +127,7 @@ export default function EmailSender() {
               init={{
                 // 👈 minimum writing area
                 height: 300, // 👈 default writing area
-                menubar: false,
+                menubar: true,
                 plugins: [
                   // Core editing features
                   "anchor",
