@@ -2,10 +2,7 @@ import React from "react";
 import toast from "react-hot-toast";
 import { sendEmail } from "../Services/emailservice";
 import { Editor } from "@tinymce/tinymce-react";
-require("dotenv").config();
 
-private_key=process.env.Secret_key;
-private_key2=process.env.Secret_key2;
 
 
 
@@ -126,7 +123,7 @@ export default function EmailSender() {
               onInit={(evt, editor) => {
                 editorRef.current = editor;
               }}
-              apiKey={private_key}
+              apiKey={import.meta.env.VITE_SECRET1}
               init={{
                 // 👈 minimum writing area
                 height: 300, // 👈 default writing area
@@ -186,7 +183,7 @@ export default function EmailSender() {
                   respondWith.string(() =>
                     Promise.reject("See docs to implement AI Assistant")
                   ),
-                uploadcare_public_key: {private_key2},
+                uploadcare_public_key: import.meta.env.VITE_SECRET1,
               }}
               initialValue="Welcome to TinyMCE!"
             />
