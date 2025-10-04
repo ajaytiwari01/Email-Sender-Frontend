@@ -183,7 +183,7 @@ export default function EmailSender() {
                   respondWith.string(() =>
                     Promise.reject("See docs to implement AI Assistant")
                   ),
-                uploadcare_public_key: import.meta.env.VITE_SECRET1,
+                uploadcare_public_key: import.meta.env.VITE_SECRET2,
               }}
               initialValue="Welcome to TinyMCE!"
             />
